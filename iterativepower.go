@@ -1,10 +1,10 @@
 package piscine
 
 func iterativePower(nb int, power int) int {
-	result := 1
 	if power < 0 {
 		return 0
 	}
+	result := 1
 	if power == 0 {
 		return 1
 	}
