@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func iterativePower(nb int, power int) int {
 	result := 1
