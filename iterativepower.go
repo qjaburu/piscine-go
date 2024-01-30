@@ -1,12 +1,16 @@
 package piscine
 
-func iterativePower(nb int, power int) int {
-	result := nb
-	if power == 0 {
+import "fmt"
+
+func IterativePower(nb int, power int) int {
+	if power < 0 {
 		return 0
 	}
-	for i := 1; i < power+1; i++ {
-		result *= nb
+
+	result := 1
+	for i := 0; i < power; i++ {
+		//result *= nb
+		result = result * nb
 	}
 	return result
 }
