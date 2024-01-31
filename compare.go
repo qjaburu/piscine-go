@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package piscine
 
 func Compare(a, b string) int {
 	for i := 0; i < len(a) && i < len(b); i++ {
@@ -16,10 +14,4 @@ func Compare(a, b string) int {
 		return 1
 	}
 	return 0
-}
-
-func main() {
-	fmt.Println(Compare("Hello!", "Hello!"))
-	fmt.Println(Compare("Salut!", "lut!"))
-	fmt.Println(Compare("Ola!", "Ol"))
 }
