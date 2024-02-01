@@ -1,9 +1,9 @@
 package piscine
 
 func AlphaCount(s string) int {
-	count := 0
+	var count int
 	for _, char := range s {
-		if char >= 'A' && char <= 'Z' || char >= 'a' && char <= 'z' {
+		if (char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z') {
 			count++
 		}
 		return count
