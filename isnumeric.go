@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func IsNumeric(s string) bool {
 	if len(s) == 0 {
 		return false
@@ -16,4 +14,3 @@ func IsNumeric(s string) bool {
 	}
 	return true
 }
-
