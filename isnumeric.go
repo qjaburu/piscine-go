@@ -6,7 +6,7 @@ func IsNumeric(s string) bool {
 	}
 
 	for _, q := range s {
-		if q >= '0' && q <= '9' {
+		if q >= '0' && q <= '9' { // if you use if condition you have to use "continue"
 			continue
 		} else {
 			return false
