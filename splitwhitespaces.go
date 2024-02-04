@@ -10,7 +10,7 @@ func SplitWhiteSpaces(s string) []string {
 				word = -1
 			}
 		} else if word == -1 {
-			word = 1
+			word = i
 		}
 		if word != -1 {
 			sent = append(sent, s[word:])
