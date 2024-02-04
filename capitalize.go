@@ -7,7 +7,7 @@ func Capitalize(s string) string {
 		if (n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'z') || (n >= '0' && n <= '9') {
 			if next {
 				if n >= 'a' && n <= 'z' {
-					result += string(n - 32)
+					result += string(n - ('a' - 'A'))
 				} else {
 					result += string(n)
 				}
@@ -15,7 +15,7 @@ func Capitalize(s string) string {
 
 			} else {
 				if n >= 'A' && n <= 'Z' {
-					result += string(n + 32)
+					result += string(n + ('a' - 'A'))
 				} else {
 					result += string(n)
 				}
