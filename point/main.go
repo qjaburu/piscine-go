@@ -3,7 +3,8 @@ package main
 import "github.com/01-edu/z01"
 
 type point struct {
-	x, y int
+	x int
+	y int
 }
 
 func setPoint(ptr *point) {
@@ -11,22 +12,31 @@ func setPoint(ptr *point) {
 	ptr.y = 21
 }
 
+func PrintStr(s string) {
+	arrayStr := []rune(s)
+	for i := range arrayStr {
+		z01.PrintRune(arrayStr[i])
+	}
+}
+
+func PrintValue(n int) {
+	v := '0'
+	if n/10 > 0 {
+		PrintValue(n / 10)
+	}
+	for i := 0; i < n%10; i++ {
+		v++
+	}
+	z01.PrintRune(v)
+}
+
 func main() {
 	points := &point{}
 
 	setPoint(points)
-
-	z01.PrintRune('x')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-	z01.Printf("%d", points.x)
-	z01.PrintRune(',')
-	z01.PrintRune(' ')
-	z01.PrintRune('y')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-	z01.Printf("%d", points.y)
-	z01.PrintRune('\n')
+	PrintStr("x = ")
+	PrintValue(points.x)
+	z01.PrintRune(" , ")
+	PrintStr("y = ")
+	PrintValue(points.y)
 }
