@@ -1,7 +1,5 @@
 package piscine
 
-import "github.com/01-edu/z01"
-
 func JumpOver(str string) string {
 	var value string
 	for i, char := range str {
@@ -9,7 +7,7 @@ func JumpOver(str string) string {
 			value += string(char)
 		}
 		if value == "" {
-			z01.PrintRune('\n')
+			return "\n"
 		}
 	}
 	return value + "\n"
