@@ -13,7 +13,7 @@ func ShoppingSummaryCounter(str string) map[string]int {
 		} else if el != 32 {
 			items += string(byte(el))
 		}
-		list[items] += 1
 	}
+	list[items] += 1
 	return list
 }
