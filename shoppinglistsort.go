@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package piscine
 
 func ShoppingListSort(slice []string) []string {
 	for i := 0; i < len(slice); i++ {
@@ -11,9 +9,4 @@ func ShoppingListSort(slice []string) []string {
 		}
 	}
 	return slice
-}
-
-func main() {
-	slice := []string{"Pineapple", "Honey", "Mushroom", "Tea", "Pepper", "Milk"}
-	fmt.Println(ShoppingListSort(slice))
 }
