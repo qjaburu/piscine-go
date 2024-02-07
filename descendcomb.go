@@ -19,7 +19,6 @@ func DescendComb() {
 						z01.PrintRune(' ')
 					}
 				}
-				d = '9'
 			}
 		}
 	}
