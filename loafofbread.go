@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func LoafOfBread(s string) string {
 	if len(s) < 5 {
