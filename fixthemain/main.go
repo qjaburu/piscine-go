@@ -1,4 +1,4 @@
-package piscine
+package main
 
 import "fmt"
 
@@ -6,24 +6,36 @@ type Door struct {
 	state int
 }
 
+const (
+	OPEN  = 1
+	CLOSE = 0
+)
+
+func PrintStr(s string) {
+	for _, r := range s {
+		fmt.Printf("%c", r)
+	}
+	fmt.Println()
+}
+
 func OpenDoor(ptrDoor *Door) {
-	fmt.Println("Door Opening...")
-	ptrDoor.state = 1
+	PrintStr("Door Opening...")
+	ptrDoor.state = OPEN
 }
 
 func CloseDoor(ptrDoor *Door) {
-	fmt.Println("Door Closing...")
-	ptrDoor.state = 0
+	PrintStr("Door Closing...")
+	ptrDoor.state = CLOSE
 }
 
-func IsDoorOpen(ptrDoor *Door) bool {
-	fmt.Println("Is the Door opened ?")
-	return ptrDoor.state == 1
+func IsDoorOpen(Door Door) bool {
+	PrintStr("Is the Door opened?")
+	return Door.state == OPEN
 }
 
 func IsDoorClose(ptrDoor *Door) bool {
-	fmt.Println("Is the Door closed ?")
-	return ptrDoor.state == 0
+	PrintStr("Is the Door closed?")
+	return ptrDoor.state == CLOSE
 }
 
 func main() {
@@ -33,10 +45,10 @@ func main() {
 	if IsDoorClose(door) {
 		OpenDoor(door)
 	}
-	if IsDoorOpen(door) {
+	if IsDoorOpen(*door) {
 		CloseDoor(door)
 	}
-	if door.state == 1 {
+	if door.state == OPEN {
 		CloseDoor(door)
 	}
 }
