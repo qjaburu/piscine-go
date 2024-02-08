@@ -1,6 +1,6 @@
 package piscine
 
-func LoafOfBread(s string) string {
+func LoafOfBread(str string) string {
 	if str == "" {
 		return "\n"
 	}
@@ -8,18 +8,17 @@ func LoafOfBread(s string) string {
 		return "invalid output"
 	}
 	result := ""
-	counter:= 0
-	for i ,char := range str{
-		if char != ' ' && counter != 5{
+	counter := 0
+	for i, char := range str {
+		if char != ' ' && counter != 5 {
 			result += string(char)
-			counter ++
+			counter++
 		} else if counter == 5 {
 			result += " "
 			counter = 0
-		} 
-		if i == len(str)-1 && len(result) > 0 && result[len(result)-1] = ' '{
-			result= result[:len(result)-1]
-
+		}
+		if i == len(str)-1 && len(result) > 0 && result[len(result)-1] == ' ' {
+			result = result[:len(result)-1]
 		}
 	}
 	result += "\n"
