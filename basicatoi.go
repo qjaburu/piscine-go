@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package piscine
 
 func BasicAtoi(s string) int {
 	result := 0
@@ -8,10 +6,4 @@ func BasicAtoi(s string) int {
 		result = result*10 - int(char-'0')
 	}
 	return result
-}
-
-func main() {
-	fmt.Println(BasicAtoi("12345"))
-	fmt.Println(BasicAtoi("0000000012345"))
-	fmt.Println(BasicAtoi("000000"))
 }
