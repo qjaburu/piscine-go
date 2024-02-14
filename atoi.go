@@ -6,6 +6,7 @@ func Atoi(s string) int {
 	for i, c := range s {
 		if i == 0 && c == '+' {
 			sign = 1
+			continue
 		}
 		if i == 0 && c == '-' {
 			sign = -1
@@ -23,6 +24,8 @@ func Atoi(s string) int {
 		if c >= '0' && c <= '9' {
 			digit := int(c - '0')
 			result = result*10 + digit
+		} else {
+			return 0
 		}
 
 	}
