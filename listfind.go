@@ -1,7 +1,5 @@
 package piscine
 
-
-
 func CompStr(a, b interface{}) bool {
 	return a == b
 }
