@@ -16,6 +16,9 @@ func Atoi(s string) int {
 		if i > 0 && c == '+' {
 			return 0
 		}
+		if i > 0 && c == ' ' {
+			return 0
+		}
 		if c >= '0' && c <= '9' {
 			digit := int(c - '0')
 			result = result*10 + digit
